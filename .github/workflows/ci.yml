@@ -1,0 +1,15 @@
+name: Backend Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    uses: codewithsharu/templates/.github/workflows/deploy-vercel-backend.yml@main
+    with:
+      node-version: '20'
+    secrets:
+      VERCEL_BACKEND_TOKEN: ${{ secrets.VERCEL_BACKEND_TOKEN }}
