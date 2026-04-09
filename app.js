@@ -12,6 +12,11 @@ const employees = [
   { id: 103, name: "Shareen", empId: "EMP003" }
 ];
 
+
+app.get("/", (req, res) => {
+  res.send(" AZ Backend API Working");
+});
+
 app.get("/api/status", (req, res) => {
   res.json({
     backendStatus: "UP",
