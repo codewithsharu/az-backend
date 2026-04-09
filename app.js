@@ -17,6 +17,10 @@ app.get("/", (req, res) => {
   res.send(" AZ Backend API Working");
 });
 
+app.get("/mark", (req, res) => {
+  res.send(" markdown text : shareen 123");
+});
+
 app.get("/api/status", (req, res) => {
   res.json({
     backendStatus: "UP",
